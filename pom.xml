@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ahmethadziaganovic.example</groupId>
+    <artifactId>your-artifact-id</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <!-- Sekcija za zavisnosti -->
+    <dependencies>
+        <!-- SLF4J zavisnosti -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.0-alpha1</version> <!-- Možeš koristiti i najnoviju verziju -->
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.0-alpha1</version> <!-- Možeš koristiti i najnoviju verziju -->
+        </dependency>
+
+        <!-- Ostale zavisnosti tvoje aplikacije -->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-sync</artifactId>
+            <version>4.6.1</version> <!-- Tvoja verzija MongoDB drivera -->
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>bson</artifactId>
+            <version>4.6.1</version> <!-- Tvoja verzija BSON biblioteke -->
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-core</artifactId>
+            <version>4.6.1</version> <!-- Tvoja verzija MongoDB core drivera -->
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>bson-record-codec</artifactId>
+            <version>4.6.1</version> <!-- Tvoja verzija BSON Record Codec-a -->
+        </dependency>
+    </dependencies>
+
+    <!-- Sekcija za build (ako je već imaš, ostavi je ovako) -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.5.0</version>
+                <configuration>
+                    <mainClass>com.ahmethadziaganovic.example.MainWindow</mainClass> <!-- Tvoja glavna klasa -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
